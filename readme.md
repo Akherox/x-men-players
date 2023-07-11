@@ -62,7 +62,7 @@ I`m going to improve using var() function on css.
 ### Useful resources
 
 - [Example resource 1](https://github.com/Akherox/marvel-pvp) - This helped me for it was an old project that i made.
-- [Example resource 2](https://github.com/Akherox/tiny-portfolio) - This is another project that helped me.
+- [Example resource 2](https://github.com/Akherox/pokedex-complex) - This is another project that helped me.
 
 ## Author
 
