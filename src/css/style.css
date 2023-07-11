@@ -6,7 +6,7 @@ body{
 
 body::before{
 content: "";
-background-image: url(../imagens/bg-desktop.jpg);
+background-image: url(../assets/bg-desktop.jpg);
 background-repeat: no-repeat;
 background-size: cover;
 width: 100%;
@@ -14,8 +14,34 @@ height: 100%;
 position: absolute;
 z-index: -1;
 background-position: center;
-opacity: 0.2;
+opacity: 0.5;
+}
 
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+  }
+  
+  @property --gradX {
+    syntax: '<percentage>';
+    initial-value: 50%;
+    inherits: true;
+  }
+  
+  @property --gradY {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+  }
+
+  :root {
+	--d: 1500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: rgba(2, 112, 247);
+	--c2: rgba(168, 239, 255, 0.1);
 }
 
 .cabecalho{
@@ -27,17 +53,16 @@ opacity: 0.2;
    
     display: flex;
     align-items: center;
-	gap: 30px;
+	gap: 25px;
     min-height: calc(100vh - 152px);
     justify-content: center;
-
 }
 .selecao-de-personagens .lista-de-personagens{
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 25px;
 	justify-content: center;
-    
+    align-items: center;
 }
 .selecao-de-personagens .personagens{
    
@@ -54,15 +79,46 @@ opacity: 0.2;
     border-bottom: 2px solid #47f7ff;
     width: 100%;
     text-align: center;
-
 }
 .lista-de-personagens .personagens img{
     width: 100%;
     height: 100%;
 }
 .lista-de-personagens .personagem.selecionado {
-    box-shadow: 0px 0px 24px 5px #0271f7;
+    height: 205px;
+    border: 8px solid;
+    margin: -8px;
+	border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.51turn, var(--c2) 0.51turn) 1;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
 
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
 }
 
 .personagem-selecionado{

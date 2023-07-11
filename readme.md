@@ -1,52 +1,70 @@
+# X-men players
 
-X-men
+This is a sixth practice of mine Frontend studies, a personal challenge to improve mine coding skills building own projects. 
 
-Projeto de estudo em modelo de catálogo de desenho animado.
+## Table of contents
 
+- [X-men players](#x-men-players)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Feed Back](#feed-back)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
 
+## Overview
 
-## Autores
+### Screenshot
 
-- [@RafaellaManfrenatti](https://www.github.com/octokatherine)
+![](/src/assets/screenshot.png)
 
+### Links
 
+- Code URL: [GitHub](https://github.com/Akherox/x-men-players)
+- Live Site URL: [GitHub Pages](https://akherox.github.io/x-men-players/)
 
-## Licença
+## My process
 
-[MIT](https://choosealicense.com/licenses/mit/)
+### Built with
 
+- Semantic HTML5 markup
+- CSS custom properties
+- Responsive CSS
 
- ## 🛠️ Instalação
+### What I learned
 
-1. Clone este repositório para o seu ambiente local.
-2. Certifique-se de ter um navegador compatível com a Web3, como MetaMask, instalado em seu computador.
-3. Abra o navegador e faça login na sua conta do MetaMask.
-4. Configure o MetaMask para se conectar à rede Ethereum desejada (por exemplo, a rede Ropsten, Rinkeby ou a rede local).
-5. No terminal, navegue até o diretório do projeto clonado.
-6. Inicie um servidor local ou utilize um servidor de sua preferência para hospedar o projeto.
-7. Acesse o projeto através do navegador, digitando o endereço local do servidor.
+How to use var() function and @keyframes.
 
+```css
+.lista-de-personagens .personagem.selecionado {
+    height: 205px;
+    border: 8px solid;
+    margin: -8px;
+	border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.51turn, var(--c2) 0.51turn) 1;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
 
-Certifique-se de ter todas as dependências e bibliotecas necessárias instaladas, caso esteja utilizando alguma no projeto.
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+```
 
-Observação: Se o seu projeto já está hospedado em um servidor, você pode pular os passos 1, 5 e 6.
+### Feed Back
 
-    
+I`m going to improve using var() function on css.
 
+### Useful resources
 
-## 💻 Uso
+- [Example resource 1](https://github.com/Akherox/marvel-pvp) - This helped me for it was an old project that i made.
+- [Example resource 2](https://github.com/Akherox/tiny-portfolio) - This is another project that helped me.
 
-1. Certifique-se de ter cumprido os requisitos de instalação descritos anteriormente.
-2. Abra o projeto em um navegador compatível com a Web3, como MetaMask.
-3. Faça login na sua conta do MetaMask e conecte-se à rede Ethereum desejada (por exemplo, Ropsten, Rinkeby ou a rede local).
-4. No navegador, acesse o URL do projeto ou execute-o localmente.
-5. Agora você pode explorar as funcionalidades do projeto e interagir com ele usando a interface fornecida.
+## Author
 
-
-
-Certifique-se de fornecer informações detalhadas sobre como interagir com seu projeto usando a interface disponível. Isso pode incluir o passo a passo para realizar diferentes ações e quais resultados esperar ao executar cada ação.
-
-Lembre-se de adaptar essas instruções com base nas funcionalidades específicas do seu projeto e nas interações que os usuários devem realizar.
-
-
-
+- Website - [Bryan Bravo](https://www.linkedin.com/in/alex-bravo-008-mk)
+- GitHub Profile - [@Akherox](https://github.com/Akherox)
